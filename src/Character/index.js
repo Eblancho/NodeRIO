@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 class Character {
     constructor(baseURL) {
         this.baseURL = baseURL;
+        this.headers = {};
 
         /**
          * Retrieve high level item information for player
@@ -97,10 +98,10 @@ class Character {
         'Cache-Control': 'no-cache'
     };
 
-    async request(URL, headers = null) {
+    async request(URL) {
         console.log(URL);
         let RIOResponse = await fetch(URL, {
-            headers: headers
+            headers: this.headers
         });
         
         return await RIOResponse.json();
