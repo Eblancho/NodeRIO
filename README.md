@@ -1,6 +1,5 @@
 # NodeRIO
 
-
 ## A Node.JS RaiderIO Library To Retrieve and use data from the RaiderIO Api. 
 
 ## Installation
@@ -24,7 +23,20 @@ nodeRIO.Character.getProfile("eu", "confrérie-du-thorium", "redwh").then((resul
 ```
 
 ### Currently Supports
-- [x] Character Profile
+- [x] Character Profile (With option)
+- [x] Character Profile Gear
+- [x] Character Profile Guild
+- [x] Character Profile Covenant
+- [x] Character Profile Raid Progression
+- [x] Character Profile Mythic+ Score for current season
+- [x] Character Profile Mythic+ Score by season
+- [x] Character Profile Mythic+ Rank
+- [x] Character Profile Mythic+ 10 Recent Runs (current season)
+- [x] Character Profile Mythic+ 10 Best Runs (current season)
+- [x] Character Profile Mythic+ All Best Runs (current season)
+- [x] Character Profile Mythic+ 10 Highest Runs (current season)
+- [x] Character Profile Mythic+ 10 Weekly Highest Runs
+- [x] Character Profile Mythic+ 10 Previous Week Highest Runs
 - [ ] Default Periods
 - [ ] Guild Boss Kill
 - [ ] Guild Profile
@@ -42,3 +54,21 @@ nodeRIO.Character.getProfile("eu", "confrérie-du-thorium", "redwh").then((resul
 ### Authors
 
 * **[Eblancho (Me)](https://github.com/Eblancho)**
+
+### Documentation (More details : https://raider.io/api)
+
+- **getProfile(region, realm, name)**: retrieve one or many information for player depending on the configuration of the object
+- **getGear(region, realm, name)**: retrieve high level item information for player
+- **getGuild(region, realm, name)**: retrieve basic information about guild the player is in
+- **getCovenant(region, realm, name)**: retrieve the covenant and renown level of the player
+- **getRaidProgression(region, realm, name)**: retrieve raid progression data for character
+- **getCurrentMythicPlusScores(region, realm, name)**: retrieve scores for current mythic plus season.
+- **getSeasonMythicPlusScores(region, realm, name, season)**: retrieve scores by mythic plus season. You can specify one or more season by appending multiple ':<season-id>' values to this field. 
+*Note: Results are returned in an array that matches the order of the seasons in the request.*
+- **getCurrentMythicPlusRanks(region, realm, name)**: retrieve current season mythic plus rankings for player.
+- **getMythicPlusRecentRuns(region, realm, name)**: retrieve ten most recent mythic plus runs for player (current season only).
+- **getMythicBestRuns(region, realm, name)**: retrieve ten most high scoring mythic plus runs for player (current season only).
+- **getAllMythicBestRuns(region, realm, name)**: retrieve most high scoring mythic plus runs for each keys for player (current season only).
+- **getMythicPlusHighestRuns(region, realm, name)**: retrieve the player's ten highest Mythic+ runs by Mythic+ level (current season only)
+- **getMythicPlusWeeklyHighestRuns(region, realm, name)**: retrieve the player's ten highest Mythic+ runs by Mythic+ level for the current raid week (current season only)
+- **getMythicPlusPreviousWeekHighestRuns(region, realm, name)**: retrieve the player's ten highest Mythic+ runs by Mythic+ level for the previous raid week (current season only)

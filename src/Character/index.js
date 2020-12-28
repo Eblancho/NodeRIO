@@ -118,6 +118,71 @@ class Character {
         return this.request(URL);
     }
 
+    async getGear(region, realm, name) {
+        this.gear = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getGuild(region, realm, name) {
+        this.guild = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getCovenant(region, realm, name) {
+        this.covenant = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getRaidProgression(region, realm, name) {
+        this.raid_progression = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getCurrentMythicPlusScores(region, realm, name) {
+        this.mythic_plus_scores_by_season = this._mythic_plus_scores_by_season_current;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getSeasonMythicPlusScores(region, realm, name, season) {
+        this.mythic_plus_scores_by_season = season;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getCurrentMythicPlusRanks(region, realm, name) {
+        this.mythic_plus_ranks = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getMythicPlusRecentRuns(region, realm, name) {
+        this.mythic_plus_recent_runs = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getMythicBestRuns(region, realm, name) {
+        this.mythic_plus_best_runs = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getAllMythicBestRuns(region, realm, name) {
+        this.mythic_plus_best_runs = this._mythic_plus_best_runs_all;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getMythicPlusHighestRuns(region, realm, name) {
+        this.mythic_plus_highest_level_runs = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getMythicPlusWeeklyHighestRuns(region, realm, name) {
+        this.mythic_plus_weekly_highest_level_runs = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getMythicPlusPreviousWeekHighestRuns(region, realm, name) {
+        this.mythic_plus_previous_weekly_highest_level_runs = true;
+        return await this.getProfile(region, realm, name);
+    }
+
     getFieldsString() {
         let fields = "";
         if (this.gear !== false) {
