@@ -40,7 +40,7 @@ nodeRIO.Character.getProfile("eu", "confrérie-du-thorium", "redwh").then((resul
 - [ ] Default Periods
 - [ ] Guild Boss Kill
 - [ ] Guild Profile
-- [ ] Global Mythic+ Affixes
+- [x] Global Mythic+ Affixes
 - [ ] Global Mythic+ Leaderboard Capacity
 - [ ] Global Mythic+ Top Runs
 - [ ] Global Mythic+ Colors used for score tiers
@@ -57,6 +57,7 @@ nodeRIO.Character.getProfile("eu", "confrérie-du-thorium", "redwh").then((resul
 
 ### Documentation (More details : https://raider.io/api)
 
+## Character
 - **getProfile(region, realm, name)**: retrieve one or many information for player depending on the configuration of the object
 - **getGear(region, realm, name)**: retrieve high level item information for player
 - **getGuild(region, realm, name)**: retrieve basic information about guild the player is in
@@ -72,3 +73,13 @@ nodeRIO.Character.getProfile("eu", "confrérie-du-thorium", "redwh").then((resul
 - **getMythicPlusHighestRuns(region, realm, name)**: retrieve the player's ten highest Mythic+ runs by Mythic+ level (current season only)
 - **getMythicPlusWeeklyHighestRuns(region, realm, name)**: retrieve the player's ten highest Mythic+ runs by Mythic+ level for the current raid week (current season only)
 - **getMythicPlusPreviousWeekHighestRuns(region, realm, name)**: retrieve the player's ten highest Mythic+ runs by Mythic+ level for the previous raid week (current season only)
+
+## Default
+
+## Guild
+
+## Mythic Plus
+- **getAffixes(region = "eu", locale = "fr")**: Retrieve the affixes for a specific region, including the latest run seen with this affix
+
+
+## Raiding
