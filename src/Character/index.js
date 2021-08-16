@@ -113,7 +113,7 @@ class Character {
             + `/profile`
             + `?region=${region.toLowerCase()}`
             + `&realm=${realm.toLowerCase()}`
-            + `&name=${name.toLowerCase()}`
+            + `&name=${name}`
             + `&fields=${this.getFieldsString()}`;
             
         return this.request(URL);
