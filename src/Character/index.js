@@ -93,6 +93,11 @@ class Character {
 
     _raid_achievement_curve_NYA = ':nyalotha-the-waking-city';
     _raid_achievement_curve_CN = ':castle-nathria';
+    _raid_achievement_curve_SOD = ':sanctum-of-domination';
+
+    _raid_achievement_meta_NYA = ':tier26';
+    _raid_achievement_meta_CN = ':tier27';
+    _raid_achievement_meta_SOD = ':tier28';
 
     _header_no_cache = {
         'Cache-Control': 'no-cache'
@@ -182,6 +187,16 @@ class Character {
 
     async getMythicPlusPreviousWeekHighestRuns(region, realm, name) {
         this.mythic_plus_previous_weekly_highest_level_runs = true;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getRaidAchievementMeta(region, realm, name, tier) {
+        this.raid_achievement_meta = tier;
+        return await this.getProfile(region, realm, name);
+    }
+
+    async getRaidAchievementCurve(region, realm, name, raid) {
+        this.raid_achievement_curve = raid;
         return await this.getProfile(region, realm, name);
     }
 

@@ -49,6 +49,60 @@ module.exports = function(region, realm, name, expectedName) {
         })
     });
 
+    it("should be able to get NYA curve profile", async function() {
+        this.timeout(5000);
+        const caller = new nodeRIO();
+        return caller.Character.getRaidAchievementCurve(region, realm, name, caller.Character._raid_achievement_curve_NYA).then(result => {
+            assert.strictEqual(result.name, expectedName); // Bon perso
+            assert.strictEqual(typeof result.raid_achievement_curve, "object"); // Pas de bug curve
+        })
+    });
+
+    it("should be able to get CN curve profile", async function() {
+        this.timeout(5000);
+        const caller = new nodeRIO();
+        return caller.Character.getRaidAchievementCurve(region, realm, name, caller.Character._raid_achievement_curve_CN).then(result => {
+            assert.strictEqual(result.name, expectedName); // Bon perso
+            assert.strictEqual(typeof result.raid_achievement_curve, "object"); // Pas de bug curve
+        })
+    });
+
+    it("should be able to get SOD curve profile", async function() {
+        this.timeout(5000);
+        const caller = new nodeRIO();
+        return caller.Character.getRaidAchievementCurve(region, realm, name, caller.Character._raid_achievement_curve_SOD).then(result => {
+            assert.strictEqual(result.name, expectedName); // Bon perso
+            assert.strictEqual(typeof result.raid_achievement_curve, "object"); // Pas de bug curve
+        })
+    });
+
+    it("should be able to get NYA meta progression profile", async function() {
+        this.timeout(5000);
+        const caller = new nodeRIO();
+        return caller.Character.getRaidAchievementMeta(region, realm, name, caller.Character._raid_achievement_meta_NYA).then(result => {
+            assert.strictEqual(result.name, expectedName); // Bon perso
+            assert.strictEqual(typeof result.raid_achievement_meta, "object"); // Pas de bug curve
+        })
+    });
+
+    it("should be able to get CN meta progression profile", async function() {
+        this.timeout(5000);
+        const caller = new nodeRIO();
+        return caller.Character.getRaidAchievementMeta(region, realm, name, caller.Character._raid_achievement_meta_CN).then(result => {
+            assert.strictEqual(result.name, expectedName); // Bon perso
+            assert.strictEqual(typeof result.raid_achievement_meta, "object"); // Pas de bug curve
+        })
+    });
+
+    it("should be able to get SOD meta progression profile", async function() {
+        this.timeout(5000);
+        const caller = new nodeRIO();
+        return caller.Character.getRaidAchievementMeta(region, realm, name, caller.Character._raid_achievement_meta_SOD).then(result => {
+            assert.strictEqual(result.name, expectedName); // Bon perso
+            assert.strictEqual(typeof result.raid_achievement_meta, "object"); // Pas de bug curve
+        })
+    });
+
     it("should be able to get current m+ scores profile", async function() {
         this.timeout(5000);
         const caller = new nodeRIO();

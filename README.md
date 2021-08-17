@@ -22,6 +22,11 @@ nodeRIO.Character.getProfile("eu", "confrérie-du-thorium", "redwh").then((resul
 });
 ```
 
+### :tada: NEW v1.1.1
+- Addition of automatic test for more reliability
+- Character Profile Raid Achievement Meta
+- Character Profile Raid Achievement Curve
+
 ### Currently Supports
 - [x] Character Profile (With option)
 - [x] Character Profile Gear
@@ -37,6 +42,8 @@ nodeRIO.Character.getProfile("eu", "confrérie-du-thorium", "redwh").then((resul
 - [x] Character Profile Mythic+ 10 Highest Runs (current season)
 - [x] Character Profile Mythic+ 10 Weekly Highest Runs
 - [x] Character Profile Mythic+ 10 Previous Week Highest Runs
+- [x] Character Profile Raid Achievement Meta
+- [x] Character Profile Raid Achievement Curve
 - [ ] Default Periods
 - [ ] Guild Boss Kill
 - [ ] Guild Profile
