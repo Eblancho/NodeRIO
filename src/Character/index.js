@@ -99,7 +99,6 @@ class Character {
     };
 
     async request(URL) {
-        console.log(URL);
         let RIOResponse = await fetch(URL, {
             headers: this.headers
         });
@@ -108,13 +107,15 @@ class Character {
     }
 
     async getProfile(region, realm, name) {
+        const fields = this.getFieldsString();
+
         const URL = `${this.baseURL}`
             + `/characters`
             + `/profile`
             + `?region=${region.toLowerCase()}`
             + `&realm=${realm.toLowerCase()}`
             + `&name=${name}`
-            + `&fields=${this.getFieldsString()}`;
+            + (fields.length > 0 ? `&fields=${fields}` : '');
             
         return this.request(URL);
     }

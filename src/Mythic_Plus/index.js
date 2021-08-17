@@ -7,7 +7,6 @@ class Mythic_Plus {
     }
     
     async request(URL) {
-        console.log(URL);
         let RIOResponse = await fetch(URL, {
             headers: this.headers
         });

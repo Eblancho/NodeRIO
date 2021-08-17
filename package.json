@@ -4,7 +4,7 @@
   "description": "Node.js wrapper for the Raider.io API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Eblancho/NodeRIO#readme",
   "dependencies": {
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.0.3",
+    "request": "^2.88.2"
   }
 }
